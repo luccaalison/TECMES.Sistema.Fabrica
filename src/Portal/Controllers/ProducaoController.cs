@@ -83,6 +83,10 @@ public class ProducaoController : Controller
     public async Task<ActionResult> CadastrarNovaProducao([FromForm] Producao request)
     {
         var ordem = await _ordemProducaoRepository.GetById(request.OrdemProducaoId);
+        if (ordem == null){
+            ModelState.AddModelError("OrdemProducaoId", "Id Ordem de Produção Informado não é valido");
+            return View();
+        }
         if (ordem.LiberadoParaProducao == false)
         {
             ModelState.AddModelError("OrdemProducaoId", "A Ordem de Produção não está liberada para produção");
