@@ -1,0 +1,48 @@
+@model Domain.Pedido
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Atualizar Pedido";
+}
+
+<h2>Atualizar Pedido</h2>
+
+
+<form method="post" asp-action="LiberarPedido">
+    <input asp-for="Id" id="Id" hidden="hidden"/>
+    <div class="mb-3">
+        <label for="VendaFinalizada" class="form-label">Liberar Venda?</label>
+        <input type="checkbox" asp-for="VendaFinalizada" class="form-check-input" id="VendaFinalizada">
+        <span asp-validation-for="VendaFinalizada" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Cliente" class="form-label">Cliente</label>
+        <input type="text" asp-for="ClienteId" class="form-control" id="ClienteId" placeholder="" disabled="disabled">
+        <span asp-validation-for="ClienteId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="ProdutoId" class="form-label">Produto</label>
+        <input type="text" asp-for="ProdutoId" class="form-control" id="ProdutoId" placeholder="" disabled="disabled">
+        <span asp-validation-for="ProdutoId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Quantidade" class="form-label">Quantidade</label>
+        <input type="text" asp-for="Quantidade" class="form-control" id="Quantidade" placeholder="" disabled="disabled">
+        <span asp-validation-for="Quantidade" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="OrdemDeProducaoId" class="form-label">Ordem De Producao </label>
+        <input type="text" asp-for="OrdemDeProducaoId" class="form-control" id="OrdemDeProducaoId" placeholder="" disabled="disabled">
+        <span asp-validation-for="OrdemDeProducaoId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Data" class="form-label">Data</label>
+        <input type="date" asp-for="Data" class="form-control" id="Data" placeholder="" disabled="disabled">
+        <span asp-validation-for="Data" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="CodigoDaVenda" class="form-label">CodigoDaVenda</label>
+        <input type="text" asp-for="CodigoDaVenda" class="form-control" id="CodigoDaVenda" placeholder="" disabled="disabled">
+        <span asp-validation-for="CodigoDaVenda" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-info"> Cadastrar </button>
+</form>

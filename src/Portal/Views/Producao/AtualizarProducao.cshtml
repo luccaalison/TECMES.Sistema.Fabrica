@@ -1,0 +1,48 @@
+@model Domain.Producao
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Atualizar Produção";
+}
+
+
+<h2>Atualizar Produção</h2>
+
+<form method="post" asp-action="AtualizarProducao">
+    <input asp-for="Id" id="Id" hidden="hidden"/>
+    <div class="mb-3">
+        <label for="Quantidade" class="form-label">Quantidade</label>
+        <input type="text" asp-for="@Model.Quantidade" class="form-control" id="Quantidade" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.Quantidade" class="text-danger"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="QuantidadeProduzida" class="form-label">Quantidade Produzida</label>
+        <input type="text" asp-for="@Model.QuantidadeProduzida" class="form-control" id="QuantidadeProduzida" placeholder="">
+        <span asp-validation-for="@Model.QuantidadeProduzida" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Sequencia" class="form-label">Sequencia</label>
+        <input type="text" asp-for="@Model.Sequencia" class="form-control" id="Sequencia" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.Sequencia" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Data" class="form-label">Data</label>
+        <input type="date" asp-for="@Model.Data" class="form-control" id="Data" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.Data" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="MaquinaId" class="form-label">Maquina</label>
+        <input type="text" asp-for="@Model.MaquinaId" class="form-control" id="MaquinaId" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.MaquinaId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="ProdutoId" class="form-label">Produto</label>
+        <input type="text" asp-for="@Model.ProdutoId" class="form-control" id="ProdutoId" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.ProdutoId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Ordem de Producao" class="form-label">Ordem de Producao</label>
+        <input type="text" asp-for="@Model.OrdemProducaoId" class="form-control" id="OrdemProducaoId" placeholder="" disabled="disabled">
+        <span asp-validation-for="@Model.OrdemProducaoId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-info"> Cadastrar </button>
+</form>

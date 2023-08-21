@@ -1,0 +1,35 @@
+@model Domain.OrdemProducao
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Nova ordem de produção";
+}
+
+<h2>Nova ordem</h2>
+
+<form method="post" asp-action="AbrirNovoOrdemDeProducao">
+    <div class="mb-3">
+        <label for="Ordem" class="form-label">Ordem</label>
+        <input type="text" asp-for="Ordem" class="form-control" id="Ordem" placeholder="">
+        <span asp-validation-for="Ordem" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Quantidade</label>
+        <input type="text" asp-for="Quantidade" class="form-control" id="Quantidade" placeholder="">
+        <span asp-validation-for="Quantidade" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3">
+        <label for="ClienteId" class="form-label">Cliente</label>
+        <input type="text" asp-for="ClienteId" class="form-control" id="ClienteId" placeholder="">
+
+        <span asp-validation-for="ClienteId" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3">
+        <label for="ProdutoId" class="form-label">Produto</label>
+        <input type="text" asp-for="ProdutoId" class="form-control" id="ProdutoId" placeholder="">
+        <span asp-validation-for="ProdutoId" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="btn btn-info"> Cadastrar </button>
+</form>
