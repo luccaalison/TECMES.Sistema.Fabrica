@@ -1,6 +1,6 @@
 # Projeto Técnico TECMES.Sistema.Fabrica
 
-Este projeto é um exemplo técnico para demonstrar o funcionamento de uma API para uma loja. **Atenção:** Este código foi criado exclusivamente para fins de teste e não deve ser utilizado em produção.
+Este projeto é um exemplo técnico para demonstrar o funcionamento de uma API. **Atenção:** Este código foi criado exclusivamente para fins de teste e não deve ser utilizado em produção.
 
 ## Como Rodar o Projeto
 
