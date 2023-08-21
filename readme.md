@@ -1,8 +1,9 @@
-# Projeto Tecnico LOJA API
+# Projeto Técnico TECMES.Sistema.Fabrica
 
-### Como rodar o projeto
+Este projeto é um exemplo técnico para demonstrar o funcionamento de uma API para uma loja. **Atenção:** Este código foi criado exclusivamente para fins de teste e não deve ser utilizado em produção.
 
-1. Configurar os arquivos `appsettings.json` e colocar a string de conexão com o banco de dados
-```JSON
- "DefaultConnection": "Data Source=CAMINHO_DO_ARQUIVO\\src\\Portal\\app.db"
- ```
+## Como Rodar o Projeto
+
+1. Configure o arquivo `appsettings.json` e insira a string de conexão com o banco de dados:
+```json
+"DefaultConnection": "Data Source=CAMINHO_DO_ARQUIVO\\src\\Portal\\app.db"
